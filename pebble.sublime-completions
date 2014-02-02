@@ -1,0 +1,74 @@
+{
+	"scope": "source.c",
+	"completions": [
+		// Add some fonts
+		"FONT_KEY_FONT_FALLBACK", "FONT_KEY_GOTHIC_14", "FONT_KEY_GOTHIC_14_BOLD", "FONT_KEY_GOTHIC_18", "FONT_KEY_GOTHIC_18_BOLD", "FONT_KEY_GOTHIC_24", "FONT_KEY_GOTHIC_24_BOLD", "FONT_KEY_GOTHIC_28", "FONT_KEY_GOTHIC_28_BOLD", "FONT_KEY_BITHAM_30_BLACK", "FONT_KEY_BITHAM_42_BOLD", "FONT_KEY_BITHAM_42_LIGHT", "FONT_KEY_BITHAM_42_MEDIUM_NUMBERS", "FONT_KEY_BITHAM_34_MEDIUM_NUMBERS", "FONT_KEY_BITHAM_34_LIGHT_SUBSET", "FONT_KEY_BITHAM_18_LIGHT_SUBSET", "FONT_KEY_ROBOTO_CONDENSED_21", "FONT_KEY_ROBOTO_BOLD_SUBSET_49", "FONT_KEY_DROID_SERIF_28_BOLD",
+		// Add some math helpers
+		"TRIG_MAX_ANGLE", "TRIG_MAX_RATIO",
+		// 
+		// App
+		{ "trigger": "app_event_loop", "contents": "app_event_loop($1, $2)" },
+		{ "trigger": "app_get_current_graphics_context", "contents": "app_get_current_graphics_context()" },
+		{ "trigger": "pbl_main", "contents": "pbl_main($1);" },
+		// Media Utilities
+		{ "trigger": "bmp_deinit_container", "contents": "bmp_deinit_container(${1:c})" },
+		{ "trigger": "bmp_init_container", "contents": "bmp_init_container(${1:resource_id}, $2)" },
+		{ "trigger": "heap_bitmap_deinit", "contents": "heap_bitmap_deinit($1)" },
+		{ "trigger": "heap_bitmap_init", "contents": "heap_bitmap_init($1, $2)" },
+		{ "trigger": "rotbmp_deinit_container", "contents": "rotbmp_deinit_container($1)" },
+		{ "trigger": "rotbmp_init_container", "contents": "rotbmp_init_container($1, $2)" },
+		{ "trigger": "rotbmp_pair_deinit_container", "contents": "rotbmp_pair_deinit_container($1)" },
+		{ "trigger": "rotbmp_pair_init_container", "contents": "rotbmp_pair_init_container($1, $2, $3)" },
+		// Timer
+		{ "trigger": "app_timer_cancel_event", "contents": "app_timer_cancel_event($1, $2)" },
+		{ "trigger": "app_timer_send_event", "contents": "app_timer_send_event($1, $2, $3)" },
+		{ "trigger": "psleep", "contents": "psleep($1)" },
+		// Wall Time
+		{ "trigger": "clock_copy_time_string", "contents": "clock_copy_time_string($1, $2)" },
+		{ "trigger": "clock_is_24h_style", "contents": "clock_is_24h_style()" },
+		{ "trigger": "get_time", "contents": "get_time($1)" },
+		{ "trigger": "string_format_time", "contents": "string_format_time($1, $2, $3, $4)" },
+		// Math
+		{ "trigger": "cos_lookup()", "contents": "cos_lookup($1)" },
+		{ "trigger": "sin_lookup()", "contents": "sin_lookup($1)" },
+		// Dictionary
+		{ "trigger": "dict_calc_buffer_size", "contents": "dict_calc_buffer_size($1)" },
+		{ "trigger": "dict_calc_buffer_size_from_tuplets", "contents": "dict_calc_buffer_size_from_tuplets($1, $2)" },
+		{ "trigger": "dict_find", "contents": "dict_find($1, $2)" },
+		{ "trigger": "dict_merge", "contents": "dict_merge($1, $2, $3, $4, $5, $6)" },
+		{ "trigger": "dict_read_begin_from_buffer", "contents": "dict_read_begin_from_buffer($1, $2, $3)" },
+		{ "trigger": "dict_read_first", "contents": "dict_read_first($1)" },
+		{ "trigger": "dict_read_next", "contents": "dict_read_next($1)" },
+		{ "trigger": "dict_serialize_tuplets", "contents": "dict_serialize_tuplets($1, $2, $3, $4)" },
+		{ "trigger": "dict_serialize_tuplets_to_buffer", "contents": "dict_serialize_tuplets_to_buffer($1, $2, $3, $4)" },
+		{ "trigger": "dict_write_begin", "contents": "dict_write_begin($1, $2, $3)" },
+		{ "trigger": "dict_write_cstring", "contents": "dict_write_cstring($1, $2, $3)" },
+		{ "trigger": "dict_write_data", "contents": "dict_write_data($1, $2, $3, $4)" },
+		{ "trigger": "dict_write_end", "contents": "dict_write_end($1)" },
+		{ "trigger": "dict_write_int", "contents": "dict_write_int($1, $2, $3, $4, $5, $6)" },
+		{ "trigger": "dict_write_tuplet", "contents": "dict_write_tuplet($1, $2)" },
+		{ "trigger": "dict_write_uint8", "contents": "dict_write_uint8($1, $2, $3)" },
+		// AppMessage
+		{ "trigger": "app_message_deregister_callbacks", "contents": "app_message_deregister_callbacks($1)" },
+		{ "trigger": "app_message_out_get", "contents": "app_message_out_get($1)" },
+		{ "trigger": "app_message_out_release", "contents": "app_message_out_release()" },
+		{ "trigger": "app_message_out_send", "contents": "app_message_out_send()" },
+		{ "trigger": "app_message_register_callbacks", "contents": "app_message_register_callbacks($1)" },
+		// Resources
+		{ "trigger": "resource_get_handle", "contents": "resource_get_handle($1)" },
+		{ "trigger": "resource_init_current_app", "contents": "resource_init_current_app($1)" },
+		{ "trigger": "resource_load", "contents": "resource_load($1, $2, $3)" },
+		{ "trigger": "resource_load_byte_range", "contents": "resource_load_byte_range($1, $2, $3, $4)" },
+		{ "trigger": "resource_size", "contents": "resource_size($1)" },
+		// App Sync
+		{ "trigger": "app_sync_deinit", "contents": "app_sync_deinit($1)" },
+		{ "trigger": "app_sync_get", "contents": "app_sync_get($1, $2)" },
+		{ "trigger": "app_sync_init", "contents": "app_sync_init($1, $2, $3, $4, $5, $6, $7, $8)" },
+		{ "trigger": "app_sync_set", "contents": "app_sync_set($1, $2, $3)" },
+		// Logging
+		{ "trigger": "app_log", "contents": "app_log($1, $2, $3, $4, $5)" },
+		{ "trigger": "APP_LOG", "contents": "APP_LOG($1, $2, $3)" },
+		// App Communication
+		{ "trigger": "app_comm_set_sniff_interval", "contents": "app_comm_set_sniff_interval($1)" }
+	]
+}
