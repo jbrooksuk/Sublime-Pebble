@@ -1,0 +1,19 @@
+[
+	{
+		"caption": "Pebble",
+		"mnemonic": "P",
+		"id": "pebble",
+		"children": [
+			{ "command": "new_watchapp", "args": { "name": "new_watchapp" }, "caption": "New Watch App" },
+			{ "command": "new_watchface", "args": { "name": "new_watchface" }, "caption": "New Watch Face" },
+			{ "caption": "-" },
+			{ "command": "pebblebuild", "caption": "Build" },
+			{ "command": "pebbleinstall", "caption": "Install" },
+			{ "command": "pebbleclean", "caption": "Clean" },
+			{ "caption": "-" },
+			{ "command": "pebblescreenshot", "caption": "Take Screenshot" },
+			{ "caption": "-" },
+			{ "command": "open_docs", "caption": "Open Documentation" }
+		]
+	}
+]

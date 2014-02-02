@@ -1,0 +1,10 @@
+{
+	"target": "pebblebuild",
+	"selector": "source.c",
+	"variants": [
+		{
+			"name": "Compile",
+			"target": "pebblebuild"
+		}
+	]
+}
