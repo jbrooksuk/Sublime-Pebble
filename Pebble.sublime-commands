@@ -1,0 +1,34 @@
+[
+	{
+		"caption": "Pebble: Build",
+		"command": "pebble",
+		"args": {
+			"command": "build"
+		}
+	},
+	{
+		"caption": "Pebble: Clean",
+		"command": "pebble",
+		"args": {
+			"command": "clean"
+		}
+	},
+	{
+		"caption": "Pebble: Install",
+		"command": "pebble",
+		"args": {
+			"command": "install"
+		}
+	},
+	{
+		"caption": "Pebble: Screenshot",
+		"command": "pebble",
+		"args": {
+			"command": "screenshot"
+		}
+	},
+	{
+		"caption": "Pebble: Custom Command",
+		"command": "pebble"
+	}
+]
