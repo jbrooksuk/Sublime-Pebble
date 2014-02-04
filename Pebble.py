@@ -12,14 +12,17 @@ class PebbleCommand(sublime_plugin.WindowCommand):
 	def run(self, *args, **kwargs):
 		try:
 			self.PROJECT_PATH = self.window.folders()[0]
-			self.args = [self.pebble_path, os.path.join(self.PROJECT_PATH, 'pebble')]
+			self.args = ['python', self.pebble_path, os.path.join(self.PROJECT_PATH)]
 
-			self.command = kwargs.get('command', None)
-			self.args = [self.pebble_path]
-			if self.command is None:
-				self.window.show_input_panel('Command name w/o args:', '', self.on_command_custom, None, None)
+			if os.path.isfile("%s" % os.path.join(self.PROJECT_PATH, 'appinfo.json')):
+				self.command = kwargs.get('command', None)
+				self.args = [self.pebble_path]
+				if self.command is None:
+					self.window.show_input_panel('Command name w/o args:', '', self.on_command_custom, None, None)
+				else:
+					self.on_command(self.command)
 			else:
-				self.on_command(self.command)
+				sublime.status_message('App info not found');
 		except IndexError:
 			sublime.status_message('Please open a Pebble project')
 
