@@ -28,6 +28,20 @@
 		}
 	},
 	{
+		"caption": "Pebble: Ping",
+		"command": "pebble",
+		"args": {
+			"command": "ping"
+		}
+	},
+	{
+		"caption": "Pebble: List",
+		"command": "pebble",
+		"args": {
+			"command": "list"
+		}
+	},
+	{
 		"caption": "Pebble: Custom Command",
 		"command": "pebble"
 	}
