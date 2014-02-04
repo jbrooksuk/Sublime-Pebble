@@ -14,6 +14,8 @@ Sublime Pebble uses the command palette to respond to these commands:
 2. `clean`
 3. `install`
 4. `screenshot`
+5. `ping`
+6. `list`
 
 You can also supply a custom command (without parameters at the moment).
 
