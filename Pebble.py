@@ -28,7 +28,6 @@ class PebbleCommand(sublime_plugin.WindowCommand):
 
 	def on_command(self, command):
 		self.args.extend(shlex.split(str(self.command)))
-
 		self.on_done()
 
 	def on_command_custom(self, command):
