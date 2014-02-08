@@ -42,6 +42,15 @@
 		}
 	},
 	{
+		"caption": "Pebble: Set Phone",
+		"command": "pebble",
+		"args": {
+			"command": "set_pebble_phone",
+			"fill": true,
+			"fill_label": "Enter your phones IP address"
+		}
+	},
+	{
 		"caption": "Pebble: Custom Command",
 		"command": "pebble"
 	}
