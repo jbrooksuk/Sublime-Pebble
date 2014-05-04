@@ -1,12 +1,14 @@
 {
 	"scope": "source.c",
 	"completions": [
+		// App
+		{"trigger": "app_event_loop", "contents": "app_event_loop()"},
 
-		{"trigger": "app_event_loop\tthis is a realy long descriptions of a function", "contents": "app_event_loop()"},
-
+		// Communication
 		{"trigger": "app_comm_get_sniff_interval", "contents": "app_comm_get_sniff_interval()"},
 		{"trigger": "app_comm_set_sniff_interval", "contents": "app_comm_set_sniff_interval(${1:interval})"},
 
+		// AppMessage
 		{"trigger": "app_message_deregister_callbacks", "contents": "app_message_deregister_callbacks()"},
 		{"trigger": "app_message_get_context", "contents": "app_message_get_context()"},
 		{"trigger": "app_message_inbox_size_maximum", "contents": "app_message_inbox_size_maximum()"},
@@ -20,13 +22,19 @@
 		{"trigger": "app_message_register_outbox_sent", "contents": "app_message_register_outbox_sent(${1:sent_callback})"},
 		{"trigger": "app_message_set_context", "contents": "app_message_set_context(${1:context})"},
 
+		// AppSync
 		{"trigger": "app_sync_deinit", "contents": "app_sync_deinit(${1:s})"},
 		{"trigger": "app_sync_get", "contents": "app_sync_get(${1:s}, ${2:key})"},
 		{"trigger": "app_sync_init", "contents": "app_sync_init(${1:s}, ${2:buffer}, ${3:buffer_size}, ${4:keys_and_initial_values}, ${5:count}, ${6:tuple_changed_callback}, ${7:error_callback}, ${8:context})"},
 		{"trigger": "app_sync_set", "contents": "app_sync_set(${1:s}, ${2:keys_and_values_to_update}, ${3:count})"},
+
+		// DataLogging
 		{"trigger": "data_logging_create", "contents": "data_logging_create(${1:tag}, ${2:item_type}, ${3:item_length}, ${4:resume})"},
 		{"trigger": "data_logging_finish", "contents": "data_logging_finish(${1:logging_session})"},
-		{"trigger": "data_logging_log", "contents": "data_logging_log(${1:logging_session}, ${2:data}, ${3:num_items})"},		{"trigger": "dict_calc_buffer_size", "contents": "dict_calc_buffer_size(${1:tuple_count}, ${2:...})"},
+		{"trigger": "data_logging_log", "contents": "data_logging_log(${1:logging_session}, ${2:data}, ${3:num_items})"},
+
+		// Dictionary
+		{"trigger": "dict_calc_buffer_size", "contents": "dict_calc_buffer_size(${1:tuple_count}, ${2:...})"},
 		{"trigger": "dict_calc_buffer_size_from_tuplets", "contents": "dict_calc_buffer_size_from_tuplets(${1:tuplets}, ${2:tuplets_count})"},
 		{"trigger": "dict_find", "contents": "dict_find(${1:iter}, ${2:key})"},
 		{"trigger": "dict_merge", "contents": "dict_merge(${1:dest}, ${2:dest_max_size_in_out}, ${3:source}, ${4:update_existing_keys_only}, ${5:key_callback}, ${6:context})"},
@@ -43,37 +51,49 @@
 		{"trigger": "dict_write_end", "contents": "dict_write_end(${1:iter})"},
 		{"trigger": "dict_write_int", "contents": "dict_write_int(${1:iter}, ${2:key}, ${3:integer}, ${4:width_bytes}, ${5:is_signed})"},
 		{"trigger": "dict_write_tuplet", "contents": "dict_write_tuplet(${1:iter}, ${2:tuplet})"},
-		{"trigger": "dict_write_uint8", "contents": "dict_write_uint8(${1:iter}, ${2:key}, ${3:value})"},		{"trigger": "accel_data_service_subscribe", "contents": "accel_data_service_subscribe(${1:samples_per_update}, ${2:handler})"},
+		{"trigger": "dict_write_uint8", "contents": "dict_write_uint8(${1:iter}, ${2:key}, ${3:value})"},
+
+		// AccelerometerService
+		{"trigger": "accel_data_service_subscribe", "contents": "accel_data_service_subscribe(${1:samples_per_update}, ${2:handler})"},
 		{"trigger": "accel_data_service_unsubscribe", "contents": "accel_data_service_unsubscribe()"},
 		{"trigger": "accel_service_peek", "contents": "accel_service_peek(${1:data})"},
 		{"trigger": "accel_service_set_samples_per_update", "contents": "accel_service_set_samples_per_update(${1:num_samples})"},
 		{"trigger": "accel_service_set_sampling_rate", "contents": "accel_service_set_sampling_rate(${1:rate})"},
 		{"trigger": "accel_tap_service_subscribe", "contents": "accel_tap_service_subscribe(${1:handler})"},
-		{"trigger": "accel_tap_service_unsubscribe", "contents": "accel_tap_service_unsubscribe()"},		{"trigger": "app_focus_service_subscribe", "contents": "app_focus_service_subscribe(${1:handler})"},
+		{"trigger": "accel_tap_service_unsubscribe", "contents": "accel_tap_service_unsubscribe()"},
+
+		// AppFocusService
+		{"trigger": "app_focus_service_subscribe", "contents": "app_focus_service_subscribe(${1:handler})"},
 		{"trigger": "app_focus_service_unsubscribe", "contents": "app_focus_service_unsubscribe()"},
 
+		// BatteryStateService
 		{"trigger": "battery_state_service_peek", "contents": "battery_state_service_peek()"},
 		{"trigger": "battery_state_service_subscribe", "contents": "battery_state_service_subscribe(${1:handler})"},
 		{"trigger": "battery_state_service_unsubscribe", "contents": "battery_state_service_unsubscribe()"},
 
+		// BluetoothConnectionService
 		{"trigger": "bluetooth_connection_service_peek", "contents": "bluetooth_connection_service_peek()"},
 		{"trigger": "bluetooth_connection_service_subscribe", "contents": "bluetooth_connection_service_subscribe(${1:handler})"},
 		{"trigger": "bluetooth_connection_service_unsubscribe", "contents": "bluetooth_connection_service_unsubscribe()"},
 
+		// TickTimerService
 		{"trigger": "tick_timer_service_subscribe", "contents": "tick_timer_service_subscribe(${1:tick_units}, ${2:handler})"},
 		{"trigger": "tick_timer_service_unsubscribe", "contents": "tick_timer_service_unsubscribe()"},
 
+		// Logging
 		{"trigger": "app_log", "contents": "app_log(${1:log_level}, ${2:src_filename}, ${3:src_line_number}, ${4:fmt}, ${5:...})"},
 
+		// Math
 		{"trigger": "atan2_lookup", "contents": "atan2_lookup(${1:y}, ${2:x})"},
 		{"trigger": "cos_lookup", "contents": "cos_lookup(${1:angle})"},
 		{"trigger": "sin_lookup", "contents": "sin_lookup(${1:angle})"},
-
+		// Resources
 		{"trigger": "resource_get_handle", "contents": "resource_get_handle(${1:resource_id})"},
 		{"trigger": "resource_load", "contents": "resource_load(${1:h}, ${2:buffer}, ${3:max_length})"},
 		{"trigger": "resource_load_byte_range", "contents": "resource_load_byte_range(${1:h}, ${2:start_offset}, ${3:buffer}, ${4:num_bytes})"},
 		{"trigger": "resource_size", "contents": "resource_size(${1:h})"},
 
+		// Storage
 		{"trigger": "persist_delete", "contents": "persist_delete(${1:key})"},
 		{"trigger": "persist_exists", "contents": "persist_exists(${1:key})"},
 		{"trigger": "persist_get_size", "contents": "persist_get_size(${1:key})"},
@@ -85,14 +105,18 @@
 		{"trigger": "persist_write_data", "contents": "persist_write_data(${1:key}, ${2:data}, ${3:size})"},
 		{"trigger": "persist_write_int", "contents": "persist_write_int(${1:key}, ${2:value})"},
 		{"trigger": "persist_write_string", "contents": "persist_write_string(${1:key}, ${2:cstring})"},
-
+		
+		// Timer
 		{"trigger": "app_timer_cancel", "contents": "app_timer_cancel(${1:timer_handle})"},
 		{"trigger": "app_timer_register", "contents": "app_timer_register(${1:timeout_ms}, ${2:callback}, ${3:callback_data})"},
 		{"trigger": "app_timer_reschedule", "contents": "app_timer_reschedule(${1:timer_handle}, ${2:new_timeout_ms})"},
 		{"trigger": "psleep", "contents": "psleep(${1:millis})"},
 
+		// Time
 		{"trigger": "clock_copy_time_string", "contents": "clock_copy_time_string(${1:buffer}, ${2:size})"},
 		{"trigger": "clock_is_24h_style", "contents": "clock_is_24h_style()"},
+		
+		// Paths
 		{"trigger": "gpath_create", "contents": "gpath_create(${1:init})"},
 		{"trigger": "gpath_destroy", "contents": "gpath_destroy(${1:gpath})"},
 		{"trigger": "gpath_draw_filled", "contents": "gpath_draw_filled(${1:ctx}, ${2:path})"},
@@ -100,6 +124,7 @@
 		{"trigger": "gpath_move_to", "contents": "gpath_move_to(${1:path}, ${2:point})"},
 		{"trigger": "gpath_rotate_to", "contents": "gpath_rotate_to(${1:path}, ${2:angle})"},
 
+		// Primitives
 		{"trigger": "graphics_draw_bitmap_in_rect", "contents": "graphics_draw_bitmap_in_rect(${1:ctx}, ${2:bitmap}, ${3:rect})"},
 		{"trigger": "graphics_draw_circle", "contents": "graphics_draw_circle(${1:ctx}, ${2:point}, ${3:radius})"},
 		{"trigger": "graphics_draw_line", "contents": "graphics_draw_line(${1:ctx}, ${2:p0}, ${3:p1})"},
@@ -107,16 +132,23 @@
 		{"trigger": "graphics_draw_rect", "contents": "graphics_draw_rect(${1:ctx}, ${2:rect})"},
 		{"trigger": "graphics_draw_round_rect", "contents": "graphics_draw_round_rect(${1:ctx}, ${2:rect}, ${3:radius})"},
 		{"trigger": "graphics_fill_circle", "contents": "graphics_fill_circle(${1:ctx}, ${2:point}, ${3:radius})"},
-		{"trigger": "graphics_fill_rect", "contents": "graphics_fill_rect(${1:ctx}, ${2:rect}, ${3:corner_radius}, ${4:corner_mask})"},		{"trigger": "graphics_draw_text", "contents": "graphics_draw_text(${1:ctx}, ${2:text}, ${3:font}, ${4:box}, ${5:overflow_mode}, ${6:alignment}, ${7:layout})"},
+		{"trigger": "graphics_fill_rect", "contents": "graphics_fill_rect(${1:ctx}, ${2:rect}, ${3:corner_radius}, ${4:corner_mask})"},
+
+		// Text
+		{"trigger": "graphics_draw_text", "contents": "graphics_draw_text(${1:ctx}, ${2:text}, ${3:font}, ${4:box}, ${5:overflow_mode}, ${6:alignment}, ${7:layout})"},
 		{"trigger": "graphics_text_layout_get_content_size", "contents": "graphics_text_layout_get_content_size(${1:text}, ${2:font}, ${3:box}, ${4:overflow_mode}, ${5:alignment})"},
 
+		// Fonts
 		{"trigger": "fonts_get_system_font", "contents": "fonts_get_system_font(${1:font_key})"},
 		{"trigger": "fonts_load_custom_font", "contents": "fonts_load_custom_font(${1:resource})"},
-		{"trigger": "fonts_unload_custom_font", "contents": "fonts_unload_custom_font(${1:font})"},		{"trigger": "graphics_context_set_compositing_mode", "contents": "graphics_context_set_compositing_mode(${1:ctx}, ${2:mode})"},
+		{"trigger": "fonts_unload_custom_font", "contents": "fonts_unload_custom_font(${1:font})"},
+
+		// Context
+		{"trigger": "graphics_context_set_compositing_mode", "contents": "graphics_context_set_compositing_mode(${1:ctx}, ${2:mode})"},
 		{"trigger": "graphics_context_set_fill_color", "contents": "graphics_context_set_fill_color(${1:ctx}, ${2:color})"},
 		{"trigger": "graphics_context_set_stroke_color", "contents": "graphics_context_set_stroke_color(${1:ctx}, ${2:color})"},
 		{"trigger": "graphics_context_set_text_color", "contents": "graphics_context_set_text_color(${1:ctx}, ${2:color})"},
-
+		// Types
 		{"trigger": "gbitmap_create_as_sub_bitmap", "contents": "gbitmap_create_as_sub_bitmap(${1:base_bitmap}, ${2:sub_rect})"},
 		{"trigger": "gbitmap_create_with_data", "contents": "gbitmap_create_with_data(${1:data})"},
 		{"trigger": "gbitmap_create_with_resource", "contents": "gbitmap_create_with_resource(${1:resource_id})"},
@@ -130,17 +162,23 @@
 		{"trigger": "grect_equal", "contents": "grect_equal(${1:rect_a}, ${1:rect_b})"},
 		{"trigger": "grect_is_empty", "contents": "grect_is_empty(${1:rect})"},
 		{"trigger": "grect_standardize", "contents": "grect_standardize(${1:rect})"},
-		{"trigger": "gsize_equal", "contents": "gsize_equal(${1:size_a}, ${1:size_b})"},		{"trigger": "snprintf", "contents": "snprintf(${1:str}, ${2:n}, ${3:fmt}, ${4:...})"},
+		{"trigger": "gsize_equal", "contents": "gsize_equal(${1:size_a}, ${1:size_b})"},
 
+		// Format
+		{"trigger": "snprintf", "contents": "snprintf(${1:str}, ${2:n}, ${3:fmt}, ${4:...})"},
+
+		// Math
 		{"trigger": "rand", "contents": "rand()"},
 		{"trigger": "srand", "contents": "srand(${1:seed})"},
 
+		// Memory
 		{"trigger": "free", "contents": "free(${1:ptr})"},
 		{"trigger": "malloc", "contents": "malloc(${1:size})"},
 		{"trigger": "memcpy", "contents": "memcpy(${1:dest}, ${2:src}, ${3:n})"},
 		{"trigger": "memmove", "contents": "memmove(${1:dest}, ${2:src}, ${3:n})"},
 		{"trigger": "memset", "contents": "memset(${1:dest}, ${2:c}, ${3:n})"},
 
+		// String
 		{"trigger": "strcat", "contents": "strcat(${1:dest}, ${2:src})"},
 		{"trigger": "strcmp", "contents": "strcmp(${1:str1}, ${2:str2})"},
 		{"trigger": "strcpy", "contents": "strcpy(${1:dest}, ${2:src})"},
@@ -149,15 +187,22 @@
 		{"trigger": "strncmp", "contents": "strncmp(${1:str1}, ${2:str2}, ${3:n})"},
 		{"trigger": "strncpy", "contents": "strncpy(${1:dest}, ${2:src}, ${3:n})"},
 
+		// Time
 		{"trigger": "localtime", "contents": "localtime(${1:clock})"},
 		{"trigger": "strftime", "contents": "strftime(${1:s}, ${2:max}, ${3:fmt}, ${4:tm})"},
 		{"trigger": "time", "contents": "time(${1:tloc})"},
-		{"trigger": "time_ms", "contents": "time_ms(${1:tloc}, ${2:out_ms})"},		{"trigger": "property_animation_create", "contents": "property_animation_create(${1:implementation}, ${2:subject}, ${3:from_value}, ${4:to_value})"},
+		{"trigger": "time_ms", "contents": "time_ms(${1:tloc}, ${2:out_ms})"},
+
+		// PropertyAnimation
+		{"trigger": "property_animation_create", "contents": "property_animation_create(${1:implementation}, ${2:subject}, ${3:from_value}, ${4:to_value})"},
 		{"trigger": "property_animation_create_layer_frame", "contents": "property_animation_create_layer_frame(${1:layer}, ${2:from_frame}, ${3:to_frame})"},
 		{"trigger": "property_animation_destroy", "contents": "property_animation_destroy(${1:property_animation})"},
 		{"trigger": "property_animation_update_gpoint", "contents": "property_animation_update_gpoint(${1:property_animation}, ${2:time_normalized})"},
 		{"trigger": "property_animation_update_grect", "contents": "property_animation_update_grect(${1:property_animation}, ${2:time_normalized})"},
-		{"trigger": "property_animation_update_int16", "contents": "property_animation_update_int16(${1:property_animation}, ${2:time_normalized})"},		{"trigger": "animation_create", "contents": "animation_create()"},
+		{"trigger": "property_animation_update_int16", "contents": "property_animation_update_int16(${1:property_animation}, ${2:time_normalized})"},
+
+		// Animation
+		{"trigger": "animation_create", "contents": "animation_create()"},
 		{"trigger": "animation_destroy", "contents": "animation_destroy(${1:animation})"},
 		{"trigger": "animation_get_context", "contents": "animation_get_context(${1:animation})"},
 		{"trigger": "animation_is_scheduled", "contents": "animation_is_scheduled(${1:animation})"},
@@ -168,8 +213,13 @@
 		{"trigger": "animation_set_handlers", "contents": "animation_set_handlers(${1:animation}, ${2:callbacks}, ${3:context})"},
 		{"trigger": "animation_set_implementation", "contents": "animation_set_implementation(${1:animation}, ${2:implementation})"},
 		{"trigger": "animation_unschedule", "contents": "animation_unschedule(${1:animation})"},
-		{"trigger": "animation_unschedule_all", "contents": "animation_unschedule_all()"},		{"trigger": "click_number_of_clicks_counted", "contents": "click_number_of_clicks_counted(${1:recognizer})"},
+		{"trigger": "animation_unschedule_all", "contents": "animation_unschedule_all()"},
+
+		// Clicks
+		{"trigger": "click_number_of_clicks_counted", "contents": "click_number_of_clicks_counted(${1:recognizer})"},
 		{"trigger": "click_recognizer_get_button_id", "contents": "click_recognizer_get_button_id(${1:recognizer})"},
+
+		// ActionBarLayer
 		{"trigger": "action_bar_layer_add_to_window", "contents": "action_bar_layer_add_to_window(${1:action_bar}, ${2:window})"},
 		{"trigger": "action_bar_layer_clear_icon", "contents": "action_bar_layer_clear_icon(${1:action_bar}, ${2:button_id})"},
 		{"trigger": "action_bar_layer_create", "contents": "action_bar_layer_create()"},
@@ -180,7 +230,8 @@
 		{"trigger": "action_bar_layer_set_click_config_provider", "contents": "action_bar_layer_set_click_config_provider(${1:action_bar}, ${2:click_config_provider})"},
 		{"trigger": "action_bar_layer_set_context", "contents": "action_bar_layer_set_context(${1:action_bar}, ${2:context})"},
 		{"trigger": "action_bar_layer_set_icon", "contents": "action_bar_layer_set_icon(${1:action_bar}, ${2:button_id}, ${3:bitmap})"},
-
+		
+		// BitmapLayer
 		{"trigger": "bitmap_layer_create", "contents": "bitmap_layer_create(${1:frame})"},
 		{"trigger": "bitmap_layer_destroy", "contents": "bitmap_layer_destroy(${1:bitmap_layer})"},
 		{"trigger": "bitmap_layer_get_bitmap", "contents": "bitmap_layer_get_bitmap(${1:bitmap_layer})"},
@@ -189,11 +240,13 @@
 		{"trigger": "bitmap_layer_set_background_color", "contents": "bitmap_layer_set_background_color(${1:bitmap_layer}, ${2:color})"},
 		{"trigger": "bitmap_layer_set_bitmap", "contents": "bitmap_layer_set_bitmap(${1:bitmap_layer}, ${2:bitmap})"},
 		{"trigger": "bitmap_layer_set_compositing_mode", "contents": "bitmap_layer_set_compositing_mode(${1:bitmap_layer}, ${2:mode})"},
-
+		
+		// InverterLayer
 		{"trigger": "inverter_layer_create", "contents": "inverter_layer_create(${1:frame})"},
 		{"trigger": "inverter_layer_destroy", "contents": "inverter_layer_destroy(${1:inverter_layer})"},
 		{"trigger": "inverter_layer_get_layer", "contents": "inverter_layer_get_layer(${1:inverter_layer})"},
-
+		
+		// MenuLayer
 		{"trigger": "menu_cell_basic_draw", "contents": "menu_cell_basic_draw(${1:ctx}, ${2:cell_layer}, ${3:title}, ${4:subtitle}, ${5:icon})"},
 		{"trigger": "menu_cell_basic_header_draw", "contents": "menu_cell_basic_header_draw(${1:ctx}, ${2:cell_layer}, ${3:title})"},
 		{"trigger": "menu_cell_title_draw", "contents": "menu_cell_title_draw(${1:ctx}, ${2:cell_layer}, ${3:title})"},
@@ -207,10 +260,14 @@
 		{"trigger": "menu_layer_set_callbacks", "contents": "menu_layer_set_callbacks(${1:menu_layer}, ${2:callback_context}, ${3:callbacks})"},
 		{"trigger": "menu_layer_set_click_config_onto_window", "contents": "menu_layer_set_click_config_onto_window(${1:menu_layer}, ${2:window})"},
 		{"trigger": "menu_layer_set_selected_index", "contents": "menu_layer_set_selected_index(${1:menu_layer}, ${2:index}, ${3:scroll_align}, ${4:animated})"},
-		{"trigger": "menu_layer_set_selected_next", "contents": "menu_layer_set_selected_next(${1:menu_layer}, ${2:up}, ${3:scroll_align}, ${4:animated})"},		{"trigger": "rot_bitmap_layer_create", "contents": "rot_bitmap_layer_create(${1:bitmap})"},
+		{"trigger": "menu_layer_set_selected_next", "contents": "menu_layer_set_selected_next(${1:menu_layer}, ${2:up}, ${3:scroll_align}, ${4:animated})"},
+
+		// RotBitmapLayer
+		{"trigger": "rot_bitmap_layer_create", "contents": "rot_bitmap_layer_create(${1:bitmap})"},
 		{"trigger": "rot_bitmap_layer_increment_angle", "contents": "rot_bitmap_layer_increment_angle(${1:rot_bitmap_layer}, ${2:angle})"},
 		{"trigger": "rot_bitmap_layer_set_angle", "contents": "rot_bitmap_layer_set_angle(${1:rot_bitmap_layer}, ${2:angle})"},
-
+		
+		// ScrollLayer
 		{"trigger": "scroll_layer_add_child", "contents": "scroll_layer_add_child(${1:scroll_layer}, ${2:child})"},
 		{"trigger": "scroll_layer_create", "contents": "scroll_layer_create(${1:frame})"},
 		{"trigger": "scroll_layer_destroy", "contents": "scroll_layer_destroy(${1:scroll_layer})"},
@@ -228,6 +285,7 @@
 		{"trigger": "scroll_layer_set_frame", "contents": "scroll_layer_set_frame(${1:scroll_layer}, ${2:frame})"},
 		{"trigger": "scroll_layer_set_shadow_hidden", "contents": "scroll_layer_set_shadow_hidden(${1:scroll_layer}, ${2:hidden})"},
 
+		// SimpleMenuLayer
 		{"trigger": "simple_menu_layer_create", "contents": "simple_menu_layer_create(${1:frame}, ${2:window}, ${3:sections}, ${4:num_sections}, ${5:callback_context})"},
 		{"trigger": "simple_menu_layer_destroy", "contents": "simple_menu_layer_destroy(${1:simple_menu})"},
 		{"trigger": "simple_menu_layer_get_layer", "contents": "simple_menu_layer_get_layer(${1:simple_menu})"},
@@ -235,6 +293,7 @@
 		{"trigger": "simple_menu_layer_get_selected_index", "contents": "simple_menu_layer_get_selected_index(${1:simple_menu})"},
 		{"trigger": "simple_menu_layer_set_selected_index", "contents": "simple_menu_layer_set_selected_index(${1:simple_menu}, ${2:index}, ${3:animated})"},
 
+		// TextLayer
 		{"trigger": "text_layer_create", "contents": "text_layer_create(${1:frame})"},
 		{"trigger": "text_layer_destroy", "contents": "text_layer_destroy(${1:text_layer})"},
 		{"trigger": "text_layer_get_content_size", "contents": "text_layer_get_content_size(${1:text_layer})"},
@@ -247,7 +306,8 @@
 		{"trigger": "text_layer_set_text", "contents": "text_layer_set_text(${1:text_layer}, ${2:text})"},
 		{"trigger": "text_layer_set_text_alignment", "contents": "text_layer_set_text_alignment(${1:text_layer}, ${2:text_alignment})"},
 		{"trigger": "text_layer_set_text_color", "contents": "text_layer_set_text_color(${1:text_layer}, ${2:color})"},
-		
+
+		// Layer		
 		{"trigger": "layer_add_child", "contents": "layer_add_child(${1:parent}, ${2:child})"},
 		{"trigger": "layer_create", "contents": "layer_create(${1:frame})"},
 		{"trigger": "layer_create_with_data", "contents": "layer_create_with_data(${1:frame}, ${2:data_size})"},
@@ -269,15 +329,18 @@
 		{"trigger": "layer_set_hidden", "contents": "layer_set_hidden(${1:layer}, ${2:hidden})"},
 		{"trigger": "layer_set_update_proc", "contents": "layer_set_update_proc(${1:layer}, ${2:update_proc})"},
 
+		// Light
 		{"trigger": "light_enable", "contents": "light_enable(${1:enable})"},
 		{"trigger": "light_enable_interaction", "contents": "light_enable_interaction()"},
 
+		// Vibes
 		{"trigger": "vibes_cancel", "contents": "vibes_cancel()"},
 		{"trigger": "vibes_double_pulse", "contents": "vibes_double_pulse()"},
 		{"trigger": "vibes_enqueue_custom_pattern", "contents": "vibes_enqueue_custom_pattern(${1:pattern})"},
 		{"trigger": "vibes_long_pulse", "contents": "vibes_long_pulse()"},
 		{"trigger": "vibes_short_pulse", "contents": "vibes_short_pulse()"},
 
+		// NumberWindow
 		{"trigger": "number_window_create", "contents": "number_window_create(${1:label}, ${2:callbacks}, ${3:callback_context})"},
 		{"trigger": "number_window_destroy", "contents": "number_window_destroy(${1:number_window})"},
 		{"trigger": "number_window_get_value", "contents": "number_window_get_value(${1:number_window})"},
@@ -287,6 +350,7 @@
 		{"trigger": "number_window_set_step_size", "contents": "number_window_set_step_size(${1:number_window}, ${2:step})"},
 		{"trigger": "number_window_set_value", "contents": "number_window_set_value(${1:number_window}, ${2:value})"},
 
+		// Window
 		{"trigger": "window_create", "contents": "window_create()"},
 		{"trigger": "window_destroy", "contents": "window_destroy(${1:window})"},
 		{"trigger": "window_get_click_config_provider", "contents": "window_get_click_config_provider(${1:window})"},
@@ -308,12 +372,12 @@
 		{"trigger": "window_single_click_subscribe", "contents": "window_single_click_subscribe(${1:window}, ${2:handler})"},
 		{"trigger": "window_single_repeating_click_subscribe", "contents": "window_single_repeating_click_subscribe(${1:button_id}, ${2:repeat_interval_ms}, ${3:handler})"},
 
+		// Stack
 		{"trigger": "window_stack_contains_window", "contents": "window_stack_contains_window(${1:window})"},
 		{"trigger": "window_stack_get_top_window", "contents": "window_stack_get_top_window()"},
 		{"trigger": "window_stack_pop", "contents": "window_stack_pop(${1:animated})"},
 		{"trigger": "window_stack_pop_all", "contents": "window_stack_pop_all(${1:animated})"},
 		{"trigger": "window_stack_push", "contents": "window_stack_push(${1:window}, ${2:animated})"},
 		{"trigger": "window_stack_remove", "contents": "window_stack_remove(${1:window}, ${2:animated})"}
-
 	]
 }
