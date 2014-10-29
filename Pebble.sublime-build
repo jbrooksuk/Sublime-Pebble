@@ -1,0 +1,11 @@
+{
+	"working_dir": "${project_path:${folder}}",
+	"cmd": ["pebble", "build"],
+	"variants":
+	[
+		{
+			"cmd": ["pebble", "build"],
+			"name": "PebbleBuild"
+		}
+	]
+}
