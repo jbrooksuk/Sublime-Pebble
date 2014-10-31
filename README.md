@@ -1,4 +1,4 @@
-# Sublime Pebble [![Gittip](http://badgr.co/gittip/jbrooksuk.png)](https://www.gittip.com/jbrooksuk/)
+# Sublime Pebble
 
 Sublime Pebble aims to be the ultimate package to help developers write watch faces and applications for their [Pebble](https://getpebble.com/) devices.
 
