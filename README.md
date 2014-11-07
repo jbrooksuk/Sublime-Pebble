@@ -8,9 +8,11 @@ This is a work in progress, so there isn't much going on yet, but it will be imp
 Sublime Pebble is currently compatible with `V2.7` of the SDK.
 
 ## Installation
+
 You can install via Package Control, just search "Pebble".
 
 ## Commands
+
 Sublime Pebble uses the command palette to respond to these commands:
 
 1. `build`
@@ -23,7 +25,9 @@ Sublime Pebble uses the command palette to respond to these commands:
 You can also supply a custom command (without parameters at the moment).
 
 ## Completions
+
 Currently there are only completions for the Foundation set of modules and a subset of the constant values.
 
 # License
+
 [MIT](http://jbrooksuk.mit-license.org)

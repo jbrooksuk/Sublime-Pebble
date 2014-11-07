@@ -85,4 +85,4 @@ class PebbleCommand(sublime_plugin.WindowCommand):
 					"working_dir": self.PROJECT_PATH
 				})
 			except IOError:
-				sublime.status_message('IOError - Command aborted') 
+				sublime.status_message('IOError - Command aborted')

@@ -17,13 +17,13 @@ def generate(header, output):
 	f = open(header,'r')
 	procs = [(i.group(1), i.group(2)) for i in regex.finditer(f.read())]
 	f.close()
-	
+
 	content = ''
 	content += '{\n'
 	content += '\t"scope": "source",\n'
 	content += '\t"completions": [\n'
-	
-	for i, proc in enumerate(procs): 
+
+	for i, proc in enumerate(procs):
 		content += '\t\t{"trigger": "' + proc[0] + '", "contents": "' + proc[0] + '('
 
 		varnames = proc[1].split(',')
@@ -38,7 +38,7 @@ def generate(header, output):
 
 	content += '\t]\n'
 	content += '}\n'
-	
+
 	f = open(output,"w")
 	f.write(content)
 	f.close()
