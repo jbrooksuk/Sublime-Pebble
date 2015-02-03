@@ -54,7 +54,7 @@ def main():
 		sys.exit(2)
 	# process options
 	for o, a in opts:
-		if o in("-h", "--help"):
+		if o in ("-h", "--help"):
 			print(__doc__)
 			sys.exit(0)
 	# process arguments
