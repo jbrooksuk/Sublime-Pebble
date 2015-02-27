@@ -11,6 +11,7 @@
 		{"trigger": "clock_is_24h_style", "contents": "clock_is_24h_style(${1:void});"},
 		{"trigger": "clock_to_timestamp", "contents": "clock_to_timestamp(${1:day},${2:hour},${3:minute});"},
 		{"trigger": "clock_is_timezone_set", "contents": "clock_is_timezone_set(${1:void});"},
+		{"trigger": "clock_get_timezone", "contents": "clock_get_timezone(${1:buf});"},
 		{"trigger": "bluetooth_connection_service_peek", "contents": "bluetooth_connection_service_peek(${1:void});"},
 		{"trigger": "bluetooth_connection_service_subscribe", "contents": "bluetooth_connection_service_subscribe(${1:handler});"},
 		{"trigger": "bluetooth_connection_service_unsubscribe", "contents": "bluetooth_connection_service_unsubscribe(${1:void});"},
@@ -81,6 +82,9 @@
 		{"trigger": "persist_write_data", "contents": "persist_write_data(${1:key},${2:data},${3:size});"},
 		{"trigger": "persist_write_string", "contents": "persist_write_string(${1:key},${2:cstring});"},
 		{"trigger": "persist_delete", "contents": "persist_delete(${1:key});"},
+		{"trigger": "strftime", "contents": "strftime(${1:s},${2:maxsize},${3:format},${4:tm_p});"},
+		{"trigger": "mktime", "contents": "mktime(${1:tb});"},
+		{"trigger": "time", "contents": "time(${1:tloc});"},
 		{"trigger": "time_ms", "contents": "time_ms(${1:tloc},${2:out_ms});"}
 	]
 }
