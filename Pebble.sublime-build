@@ -6,6 +6,14 @@
 		{
 			"cmd": ["pebble", "build"],
 			"name": "PebbleBuild"
-		}
+		},
+		{
+			"cmd": ["pebble", "install", "--emulator", "basalt"],
+			"name": "Run on Pebble Time"
+		},
+		{
+			"cmd": ["pebble", "install", "--emulator", "aplite"],
+			"name": "Run on Pebble Classic"
+		},
 	]
 }
