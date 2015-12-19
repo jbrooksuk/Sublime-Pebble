@@ -8,6 +8,10 @@
 			"name": "PebbleBuild"
 		},
 		{
+			"cmd": ["pebble", "install", "--emulator", "chalk"],
+			"name": "Run on Pebble Time Round"
+		},
+		{
 			"cmd": ["pebble", "install", "--emulator", "basalt"],
 			"name": "Run on Pebble Time"
 		},
